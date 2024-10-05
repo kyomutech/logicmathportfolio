@@ -1,0 +1,370 @@
+@charset "UTF-8";
+/****************************** Importación de Fuentes Web ******************************/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/****************************** Variables ******************************/
+
+$px-1: 0.063rem;
+$px-2: 0.125rem;
+$px-3: 0.188rem;
+$px-4: 0.25rem;
+$px-5: 0.313rem;
+$px-10: 0.625rem;
+$px-11: 0.688rem;
+$px-12: 0.75rem;
+$px-13: 0.813rem;
+$px-14: 0.875rem;
+$px-15: 0.938rem;
+$px-16: 1rem;
+$px-17: 1.063rem;
+$px-18: 1.125rem;
+$px-19: 1.188rem;
+$px-20: 1.25rem;
+$px-21: 1.313rem;
+$px-22: 1.375rem;
+$px-23: 1.438rem;
+$px-24: 1.5rem;
+$px-25: 1.563rem;
+$px-30: 1.875rem;
+$px-40: 2.5rem;
+$px-50: 3.125rem;
+$px-60: 3.75rem;
+$px-70: 4.375rem;
+$px-80: 5rem;
+$px-90: 5.625rem;
+$px-100: 6.25rem;
+$px-200: 12.5rem;
+$px-250: 15.625rem;
+$px-300: 18.75rem;
+$px-400: 25rem;
+$px-500: 31.25rem;
+$px-600: 37.5rem;
+$px-700: 43.75rem;
+$px-800: 50rem;
+$px-900: 56.25rem;
+$px-1000: 62.5rem;
+$px-1200: 75rem;
+$px-1300: 81.25rem;
+$px-1400: 87.5rem;
+$px-1500: 93.75rem;
+$px-1600: 100rem;
+$px-2000: 125rem;
+$px-2200: 137.5rem;
+
+$rem-1: 16px;
+$rem-2: 32px;
+$rem-3: 48px;
+$rem-4: 64px;
+$rem-5: 80px;
+
+$perc-25: 25%;
+$perc-50: 50%;
+$perc-75: 75%;
+$perc-100: 100%;
+
+// Títulos - Hs
+$font-family-pt-serif: "PT Serif", serif;
+// Párrafos
+$font-family-roboto-sans: "Roboto", sans-serif;
+// Botones - Navbar
+$font-family-open-sans: "Open Sans", sans-serif; 
+
+$font-size-base: 16px;
+$base-width: 100vw;
+$font-size-h1: 3rem;
+$font-size-h2: 2rem;
+$font-size-p: 1rem;
+$font-size-p-medium: 1.15rem;
+$font-size-p-large: 1.50rem;
+$font-size-btn: 1rem;
+
+// https://coolors.co/ff3333-28282a-eff7fb-42799e
+$color-primary-white: #fefefe;
+$color-primary-black: #121212;
+$color-primary-red: #ba0f0f;
+$color-primary-green: #088408;
+$color-primary-blue: #0707f1;
+$color-primary-grey: #d1d5da;
+$color-secondary-grey: #c0c4c9;
+$color-tertiary-grey: #818488;
+$color-secondary-black: #4c4848;
+$color-palette-1-1: #ccdbdc;
+$color-palette-1-2: #aac3c5;
+$color-palette-2-1: rgb(154, 209, 212);
+$color-palette-2-1-transp: #9ad1d470;
+$color-palette-2-2: #70bec2;
+$color-palette-2-2-transp: #70bec270;
+$color-palette-3-1: #80ced7;
+$color-palette-3-2: #54bdc9;
+$color-palette-4-1: #007ea7;
+$color-palette-4-2: #005c7a;
+$color-palette-5-1: #003249;
+$color-palette-5-2: #000e14;
+$color-banner-text: #d5c7e5;
+$color-contact-whatsapp: #22BF5B;
+$color-contact-whatsapp-hover: #15793A;
+$color-contact-instagram: #D61F5C;
+$color-contact-instagram-hover: #8F143D;
+$color-contact-linkedin: #0AA9FF;
+$color-contact-linkedin-hover: #0077B5;
+$color-transition-font: $color-palette-2-1;
+
+$border-radius-btn: 3.125rem;
+$border-radius-circle: 100%;
+$border-radius-toggler: 0.063rem;
+
+$box-shadow: 0 0.375rem 0.938rem rgba(0, 0, 0, 0.2);
+
+$transition-duration: 0.5s;
+$transition-ease: ease;
+
+
+$banner-padding: 8.75rem;
+$banner-text-size: 2.5rem;
+
+/****************************** Mixins ******************************/
+@mixin transition($properties, $duration, $timing-function: ease) {
+    transition: $properties $duration $timing-function;
+}
+
+@mixin center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/****************************** Estilos Globales ******************************/
+html {
+    font-size: $font-size-base;
+    max-height: $px-2200;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal overflow */
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: $font-family-pt-serif;
+}
+
+h1 {
+    color: $color-palette-1-1 !important;
+}
+
+h2, h6 {
+    color: $color-palette-4-1 !important;
+}
+
+h3, h4 {
+    color: $color-palette-5-1 !important;
+}
+
+
+
+p {
+    font-family: $font-family-open-sans;
+    color: $color-secondary-black;
+}
+
+/****************************** Estilos del Nav ******************************/
+.navbar-style {
+    @include transition(all, 1s);
+    background-color: $color-primary-grey !important;
+}
+
+.navbar-style:hover{
+    background-color: $color-secondary-grey !important;
+    box-shadow: 0 0 $px-10 $color-palette-5-2;
+    .nav-item a{
+        color: $color-palette-5-1 !important;
+        @include transition(all, 1s);
+    }
+}
+  
+.navbar {
+    padding: $px-12;
+    letter-spacing: $px-4;
+    border-bottom: $px-4 solid $color-palette-2-2-transp;
+    height: $px-100;
+}
+
+.navbar-logo {
+    width: $px-200;
+    height: 3.438rem;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.nav-item a{
+    color: $color-palette-4-1 !important;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.navbar-menu-option {
+    font-family: $font-family-open-sans;
+    color: $color-palette-4-1 !important;
+    font-size: $rem-5;
+    @include transition(all, 1s);
+}
+
+.dropdown-menu a:hover {
+    background-color: $color-palette-4-2 !important;
+}
+
+.option-menu:hover {
+    color: $color-palette-2-1 !important;
+    border-radius: $px-5;
+    background-color: $color-palette-1-2;
+    @include transition(all, 1s);
+}
+
+.option-menu:active {
+    background-color: $color-palette-4-2;
+}
+
+.dropdown-menu a {
+    color: $color-palette-1-1;
+}
+
+.dropdown-menu a:hover {
+    background-color: $color-palette-1-2;
+}
+
+/****************************** Menu Hamburguesa ******************************/
+.navbar-toggler {
+    background-color: $color-palette-3-1;
+    border: $px-1 solid $color-palette-1-2;
+    
+}
+
+.navbar-toggler:hover {
+    background-color: $color-palette-1-2;
+}
+
+.custom-toggler:active {
+    $navbar-toggler-focus-width: 0 !default;
+}
+
+.custom-toggler.navbar-toggler {
+border-color: $color-palette-3-1;
+border-width: $px-1;
+}
+
+
+/* Líneas */
+.custom-toggler .navbar-toggler-icon {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(156, 160, 187, 0.866)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler .navbar-toggler-icon:hover {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(228, 253, 225)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/****************************** Línea separadora ******************************/
+.separator-line {
+    padding-top: $px-5;
+    padding-bottom: $px-5;
+    background-color: $color-palette-1-1;
+}
+
+/****************************** Sección: Footer ******************************/
+
+.footer-style {
+    height: $px-100;
+    padding: $px-10;
+    letter-spacing: $px-2;
+    @include transition(all, 1s);
+    background-color: $color-palette-2-1;
+    box-shadow: 0 -2px 4px $color-palette-1-2;
+}
+
+.footer-text {
+    color: $color-palette-4-1;
+    font-size: larger;
+    font-weight: 500;
+}
+
+/****************************** Estilos carrusel ******************************/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: $px-50;
+  height: $px-50;
+  background-size: $perc-100, $perc-100;
+  background-color: $color-palette-1-1;
+  border-radius: $px-5;
+}
+
+.carousel-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido verticalmente */
+    background-size: cover;
+    background-position: center;
+    background-color: aliceblue !important;
+    background-blend-mode: luminosity !important;
+}
+
+.carousel-item img {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-indicators button {
+    background-color: $color-palette-1-2 !important;
+}
+
+/****************************** Estilos carrusel ******************************/
+.btn-mgr-primary {
+    background-color: $color-palette-3-1 !important;
+    color: $color-palette-4-1 !important;
+    width: 18%;
+}
+
+.btn-mgr-primary:hover {
+    background-color: $color-palette-3-2 !important;
+    color: $color-palette-4-1 !important;
+}
+
+/****************************** Menu - current option ******************************/
+
+a[aria-current="page"] {
+    pointer-events: none; /* Optional: Prevents clicking on the link */
+}
+
+a[aria-current="page"].dropdown-item.option-menu.navbar-menu-option:hover {
+    background-color: $color-palette-1-2; /* Replace with the background color you want on hover */
+    color: inherit; /* Replace with the text color you want on hover */
+}
+
+/****************************** Main Banner ******************************/
+.module-banner {
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../imgs/lm_modulo_1_banner.webp');
+    /* color del modo */
+    // background-color: $color-palette-6-1;
+    /* modo de color */
+    background-blend-mode: luminosity;
+    height: $px-600;
+    /* profundidad */
+    box-shadow: inset 0 0 0 1000px rgba(226, 221, 221, 0.4);
+    padding: $px-100;
+}
+
+.module-banner strong {
+    color: $color-palette-1-1;
+}
+
+.module-banner p {
+    // font-weight: lighter;
+    color: $color-palette-4-1 !important;
+}
+
+.espacio {
+    padding: 500px 0;
+}
+

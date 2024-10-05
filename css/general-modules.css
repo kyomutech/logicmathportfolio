@@ -1,0 +1,397 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/****************************** Importación de Fuentes Web ******************************/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/****************************** Variables ******************************/
+/****************************** Mixins ******************************/
+/****************************** Estilos Globales ******************************/
+html {
+  font-size: 16px;
+  max-height: 137.5rem;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal overflow */
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "PT Serif", serif;
+}
+
+h1 {
+  color: #ccdbdc !important;
+}
+
+h2, h6 {
+  color: #007ea7 !important;
+}
+
+h3, h4 {
+  color: #003249 !important;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  color: #4c4848;
+}
+
+/****************************** Estilos del Nav ******************************/
+.navbar-style {
+  transition: all 1s ease;
+  background-color: #d1d5da !important;
+}
+
+.navbar-style:hover {
+  background-color: #c0c4c9 !important;
+  box-shadow: 0 0 0.625rem #000e14;
+}
+.navbar-style:hover .nav-item a {
+  color: #003249 !important;
+  transition: all 1s ease;
+}
+
+.navbar {
+  padding: 0.75rem;
+  letter-spacing: 0.25rem;
+  border-bottom: 0.25rem solid rgba(112, 190, 194, 0.4392156863);
+  height: 6.25rem;
+}
+
+.navbar-logo {
+  width: 12.5rem;
+  height: 3.438rem;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.nav-item a {
+  color: #007ea7 !important;
+  font-size: larger;
+  font-weight: 500;
+}
+
+.navbar-menu-option {
+  font-family: "Open Sans", sans-serif;
+  color: #007ea7 !important;
+  font-size: 80px;
+  transition: all 1s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #005c7a !important;
+}
+
+.option-menu:hover {
+  color: rgb(154, 209, 212) !important;
+  border-radius: 0.313rem;
+  background-color: #aac3c5;
+  transition: all 1s ease;
+}
+
+.option-menu:active {
+  background-color: #005c7a;
+}
+
+.dropdown-menu a {
+  color: #ccdbdc;
+}
+
+.dropdown-menu a:hover {
+  background-color: #aac3c5;
+}
+
+/****************************** Menu Hamburguesa ******************************/
+.navbar-toggler {
+  background-color: #80ced7;
+  border: 0.063rem solid #aac3c5;
+}
+
+.navbar-toggler:hover {
+  background-color: #aac3c5;
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #80ced7;
+  border-width: 0.063rem;
+}
+
+/* Líneas */
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(156, 160, 187, 0.866)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler .navbar-toggler-icon:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(228, 253, 225)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/****************************** Línea separadora ******************************/
+.separator-line {
+  padding-top: 0.313rem;
+  padding-bottom: 0.313rem;
+  background-color: #ccdbdc;
+}
+
+/****************************** Sección: Footer ******************************/
+.footer-style {
+  height: 6.25rem;
+  padding: 0.625rem;
+  letter-spacing: 0.125rem;
+  transition: all 1s ease;
+  background-color: rgb(154, 209, 212);
+  box-shadow: 0 -2px 4px #aac3c5;
+}
+
+.footer-text {
+  color: #007ea7;
+  font-size: larger;
+  font-weight: 500;
+}
+
+/****************************** Estilos carrusel ******************************/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3.125rem;
+  height: 3.125rem;
+  background-size: 100%, 100%;
+  background-color: #ccdbdc;
+  border-radius: 0.313rem;
+}
+
+.carousel-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra el contenido verticalmente */
+  background-size: cover;
+  background-position: center;
+  background-color: aliceblue !important;
+  background-blend-mode: luminosity !important;
+}
+
+.carousel-item img {
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-indicators button {
+  background-color: #aac3c5 !important;
+}
+
+/****************************** Estilos carrusel ******************************/
+.btn-mgr-primary {
+  background-color: #80ced7 !important;
+  color: #007ea7 !important;
+  width: 18%;
+}
+
+.btn-mgr-primary:hover {
+  background-color: #54bdc9 !important;
+  color: #007ea7 !important;
+}
+
+/****************************** Menu - current option ******************************/
+a[aria-current=page] {
+  pointer-events: none; /* Optional: Prevents clicking on the link */
+}
+
+a[aria-current=page].dropdown-item.option-menu.navbar-menu-option:hover {
+  background-color: #aac3c5; /* Replace with the background color you want on hover */
+  color: inherit; /* Replace with the text color you want on hover */
+}
+
+/****************************** Main Banner ******************************/
+.module-banner {
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../imgs/lm_modulo_1_banner.webp");
+  /* color del modo */
+  /* modo de color */
+  background-blend-mode: luminosity;
+  height: 37.5rem;
+  /* profundidad */
+  box-shadow: inset 0 0 0 1000px rgba(226, 221, 221, 0.4);
+  padding: 6.25rem;
+}
+
+.module-banner strong {
+  color: #ccdbdc;
+}
+
+.module-banner p {
+  color: #007ea7 !important;
+}
+
+.espacio {
+  padding: 500px 0;
+}
+
+/****************************** Global styles ******************************/
+/****************************** Separator line ******************************/
+.module-separator-line {
+  padding-top: 0.313rem;
+  padding-bottom: 0.313rem;
+  background-color: #80ced7;
+}
+
+/****************************** Menu items ******************************/
+a.disabled {
+  pointer-events: none;
+  color: #c0c4c9;
+  cursor: not-allowed;
+}
+
+/****************************** Main Banner - Modules ******************************/
+.m-banner-1 {
+  background-image: url("../imgs/lm_module_1_banner.webp");
+}
+
+.m-banner-2 {
+  background-image: url("../imgs/lm_module_2_banner.webp");
+}
+
+.module-banner {
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  /* color del modo */
+  /* modo de color */
+  background-blend-mode: luminosity;
+  height: 37.5rem;
+  /* profundidad */
+  box-shadow: inset 0 0 0 1000px rgba(154, 209, 212, 0.4);
+  padding: 6.25rem;
+}
+
+.module-banner h1 {
+  color: #003249 !important;
+}
+
+p.module-banner-p {
+  color: #003249 !important;
+}
+
+/****************************** Module learning ******************************/
+h5 {
+  color: #005c7a !important;
+}
+
+.card-body a {
+  text-decoration: none;
+}
+
+.container-modules {
+  padding: 0 12.5rem;
+}
+
+.card-style {
+  background-color: #f8f9fc !important;
+  border: 0 !important;
+  transition: all 1s;
+}
+
+.card-style:hover {
+  background-color: rgba(154, 209, 212, 0.4) !important;
+}
+
+/****************************** Banner parallax ******************************/
+.m-parallax-1 {
+  background-image: url(../imgs/lm_module_1_parallax.webp);
+}
+
+.m-parallax-2 {
+  background-image: url(../imgs/lm_module_2_parallax.webp);
+}
+
+.banner-parallax {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 8.75rem;
+  padding-bottom: 8.75rem;
+  animation: efect 5s ease-in-out infinite alternate;
+  background-blend-mode: luminosity;
+  /* profundidad */
+  box-shadow: inset 0 0 0 1000px rgba(143, 140, 140, 0.4);
+}
+
+.banner-parallax-text {
+  font-family: "PT Serif", serif !important;
+  font-size: 2.5rem !important;
+  color: #003249 !important;
+}
+
+/****************************** Module Input ******************************/
+.text-justify-custom {
+  text-align: justify;
+}
+
+.text-justify-custom::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/****************************** List group ******************************/
+.list-group {
+  width: 100% !important;
+}
+
+.list-style:hover {
+  background-color: #c0c4c9;
+  color: #f9f9f9;
+  border-width: 1px;
+  transition: all 0.3s ease;
+}
+
+/****************************** Section: Video challenge ******************************/
+.challenge-video-div {
+  position: relative;
+  width: 100%;
+  height: 25vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.challenge-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+/****************************** Section: Video diagram ******************************/
+.logic-gate-video-div {
+  position: relative;
+  width: 100%;
+  height: 40vh; /* Increase the height to make the video bigger */
+  overflow: hidden;
+  z-index: 1;
+}
+
+.logic-gate-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain; /* Ensure the entire video is visible */
+  z-index: -1;
+  border-radius: 10px;
+  background-color: black; /* Optional for filling empty space */
+}
+
+/****************************** Section: Challenge button ******************************/
+.btn-challenge {
+  background-color: #007ea7 !important;
+  color: #ccdbdc !important;
+}/*# sourceMappingURL=general-modules.css.map */
