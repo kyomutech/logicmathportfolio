@@ -137,12 +137,12 @@
         </div>
     </section>
 
-    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ccdbdc" fill-opacity="1" d="M0,32L120,32C240,32,480,32,720,42.7C960,53,1200,75,1320,85.3L1440,96L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z"></path></svg> -->
-
+    <!-- Section: Clip path -->
     <section>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="#9ad1d470" fill-opacity="1" d="M0,32L80,26.7C160,21,320,11,480,16C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
     </section>
 
+    <!-- Section: Personal Inputs -->
     <section class="container pb-5">
         <h2 class="pb-5 text-center text-uppercase">Aporte del módulo</h2>
 
@@ -198,10 +198,12 @@
         </div>        
     </section>
 
+    <!-- Section: Clip path -->
     <section class="pt-5">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"><path fill="#9ad1d470" fill-opacity="1" d="M0,32L80,26.7C160,21,320,11,480,16C640,21,800,43,960,53.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z" transform="scale(-1, 1) translate(-1440, 0)"></path></svg>
     </section>
 
+    <!-- Section: Challenge description -->
     <section class="container pb-5">
         <h2 class="pb-5 text-center text-uppercase">Reto del módulo</h2>
 
@@ -249,20 +251,43 @@
             </div>
             <div class="pt-3"></div>
 
-            <p class="pt-3 fs-3 text-justify-custom px-3 text-center">Resolver:</p>
-            <ol class="px-3 list-group">
-                <li class="list-group-item list-style text-center"><strong>1. ¿Cuántas posibles contraseñas seguras de 8 dígitos se pueden crear?</strong></li>
-            </ol>
         </div>
-
     </section>
 
+    <!-- Section: Value quantity form -->
+    <section class="container">
+        <form class="pt-5 needs-validation">
+            <div class="form-group row">
+                <label for="values-qty-input" class="col-sm-2 col-form-label"><strong>Cantidad de valores</strong></label>
+                <div class="col-sm-2">
+                    <input type="number" class="form-control" id="values-qty-input" placeholder="Cantidad de valores">
+                </div>
+                <div class="col-sm-2 d-flex justify-content-center">
+                    <button id="start-btn" type="button" class="btn btn-secondary">Empezar</button>
+                </div>
+                <div class="col-sm-2">
+                    <button id="clean-btn" type="button" class="btn btn-success">Limpiar</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <!-- Section: Question -->
+    <section id="question-section" class="pt-5 container d-none">
+        <p class="pt-3 fs-3 text-justify-custom px-3 text-center">Pregunta:</p>
+            <ol class="px-3 list-group">
+            <li class="list-group-item list-style text-center"><strong>1. ¿Cuántas posibles contraseñas seguras de <span id="qty-text"></span> dígitos se pueden crear?</strong></li>
+        </ol>
+    </section>
+
+    <div class="pt-5"></div>
     <!-- ---------------------------------------------------------- -->
     <section class="module-separator-line animate__animated animate__slideInLeft animate__delay-1s"></section>
     <!-- ---------------------------------------------------------- -->
 
-    <section class="pt-5 container">
-        <h2 class="text-center text-uppercase">Resultado</h2>
+    <!-- Section: Get results -->
+    <section id="get-result-section" class="pt-5 container d-none">
+        <h2 class="text-center text-uppercase">Obtener resultado</h2>
         <div class="pt-5"></div>
         
         <div class="row">
@@ -286,7 +311,7 @@
                 <div class="modal-body">
                     <h6>Solución</h6>
                     <p class="pt-3 text-justify-custom px-3">Se desglosa en etapas:</p>
-                    <ul class="pt-3 px-3 list-group">
+                    <ul id="items-stages" class="pt-3 px-3 list-group">
                         <li class="list-group-item list-style">
                             <div class="row">
                                 <div class="col-4"><strong>Etapa 1:</strong></div>
@@ -311,50 +336,16 @@
                                 <div class="col-8">5 símbolos</div>
                             </div>
                         </li>
-                        <li class="list-group-item list-style">
-                            <div class="row">
-                                <div class="col-4"><strong>Etapa 5:</strong></div>
-                                <div class="col-8">63 caracteres restantes</div>
-                            </div>
-                        </li>
-                        <li class="list-group-item list-style">
-                            <div class="row">
-                                <div class="col-4"><strong>Etapa 6:</strong></div>
-                                <div class="col-8">62 caracteres restantes</div>
-                            </div>
-                        </li>
-                        <li class="list-group-item list-style">
-                            <div class="row">
-                                <div class="col-4"><strong>Etapa 7:</strong></div>
-                                <div class="col-8">61 caracteres restantes</div>
-                            </div>
-                        </li>
-                        <li class="list-group-item list-style">
-                            <div class="row">
-                                <div class="col-4"><strong>Etapa 8:</strong></div>
-                                <div class="col-8">60 caracteres restantes</div>
-                            </div>
-                        </li>
                     </ul>
 
-                    <!-- Cálculo -->
-                    <h6 class="pt-3">Cálculo del producto</h6>
-                    <p class="pt-3 text-justify-custom px-3">Multiplico todas las opciones para cada etapa:</p>
-                    <p class="text-justify-custom px-3"><strong><em>26 x 26 x 10 x 5 x 63 x 62 x 61 x 60</em></strong></p>
-                    
-
-                    <!-- Esquema visual del silogismo aristotélico -->
-                    <h6 class="pt-3">Cálculo paso a paso</h6>
-                    <div class="text-center">
-                        <p><strong>26 x 26 = 676</strong></p>
-                        <p><strong>676 x 10 = 6760</strong></p>
-                        <p><strong>6760 x 5 = 33,800</strong></p>
-                        <p><strong>33,800 x 63 = 2,129,400</strong></p>
-                        <p><strong>2,129,400 x 62 = 132,022,800</strong></p>
-                        <p><strong>132,022,800 x 61 = 190,125,000</strong></p>
-                        <p><strong>190,125,000 x 60 = 760,500,000</strong></p>
+                    <!-- Calculation -->
+                    <div id="calculation-div">
+                        <h6 class="pt-3">Cálculo del producto</h6>
+                        <p class="pt-3 text-justify-custom px-3">Multiplico todas las opciones para cada etapa:</p>
+                        <p class="text-justify-custom px-3"><strong id="calculation-info"></strong></p>
                     </div>
-                    
+
+                    <!-- Result -->
                     <div class="text-center">
                         <h6 class="pt-3 animate__animated animate__bounceIn animate__delay-2s">Resultado:</h6>
                         <p id="result-element" class="fs-3 wow animate__animated animate__bounceIn animate__delay-2s"></p>
@@ -362,7 +353,7 @@
                 </div>
                 
                 <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button id="close-modal-btn" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
             </div>

@@ -186,3 +186,17 @@ h5 {
     background-color: $color-palette-4-1 !important;
     color: $color-palette-1-1 !important;
 }
+
+/****************************** Section: d-none transitions ******************************/
+
+#question-section,
+#get-result-section {
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Adding transition effects */
+}
+
+/* Hide element with transition */
+.d-none {
+    opacity: 0; /* Make the element transparent */
+    transform: translateY(-10px); /* Slightly move it up */
+    pointer-events: none; /* Prevent any interaction */
+}
