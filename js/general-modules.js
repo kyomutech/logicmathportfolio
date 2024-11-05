@@ -5,6 +5,11 @@ var btnProd = document.getElementById('btn-prod');
 var btnIncExc = document.getElementById('btn-inc-exc');
 let timerInterval;
 
+var cardTask1 = document.getElementById('card-mod1');
+var cardTask2 = document.getElementById('card-mod2');
+var cardTask3 = document.getElementById('card-mod3');
+var cardTask4 = document.getElementById('card-mod4');
+
 var passwordLength = document.getElementById('values-qty-input').value;
 
 // Event Listeners
@@ -245,4 +250,33 @@ function createCalculationList(step3Array, step1Array){
 
     calculationInfo.appendChild(emElement);
 
+}
+
+/**
+ * @name showTask()
+ * @params card-mod1 || card-mod2 || card-mod3 || card-mod4
+ * @description Show the respective information of the tab
+ */
+function showTask(opt) {
+    if(opt === "card-mod1") {
+        cardTask1.classList.remove('d-none');
+        cardTask2.classList.add('d-none');
+        cardTask3.classList.add('d-none');
+        cardTask4.classList.add('d-none');
+    } else if (opt === "card-mod2") {
+        cardTask1.classList.add('d-none');
+        cardTask2.classList.remove('d-none');
+        cardTask3.classList.add('d-none');
+        cardTask4.classList.add('d-none');
+    } else if (opt === "card-mod3") {
+        cardTask1.classList.add('d-none');
+        cardTask2.classList.add('d-none');
+        cardTask3.classList.remove('d-none');
+        cardTask4.classList.add('d-none');
+    } else if (opt === "card-mod4") {
+        cardTask1.classList.add('d-none');
+        cardTask2.classList.add('d-none');
+        cardTask3.classList.add('d-none');
+        cardTask4.classList.remove('d-none');
+    }
 }

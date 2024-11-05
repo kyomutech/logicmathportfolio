@@ -62,41 +62,6 @@
     margin-top: -5vw;
 }
 
-
-/****************************** Section: Content menu ******************************/
-.section-content button {
-    color: $color-palette-2-2-transp !important;
-}
-
-.section-content button:hover {
-    color: $color-palette-5-1 !important;
-    @include transition(all, 1s);
-}
-
-.section-content button.active {
-    color: $color-palette-4-2 !important;
-}
-
-/****************************** Section: Cards informativos ******************************/
-
-.info-cards {
-    padding-bottom: $px-15;
-    overflow-y: hidden;
-}
-
-.card-header {
-    font-family: $font-family-pt-serif !important;
-    color: $color-palette-4-1 !important;
-}
-
-p.card-text {
-    color: $color-palette-5-1 !important;
-}
-
-.info-cards ul {
-    padding-right: $rem-1 !important;
-}
-
 /****************************** Section: List-group ******************************/
 .list-group {
     border: $px-1 solid $color-tertiary-grey;

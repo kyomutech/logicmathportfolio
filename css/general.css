@@ -224,4 +224,41 @@ a[aria-current=page].dropdown-item.option-menu.navbar-menu-option:hover {
 
 .espacio {
   padding: 500px 0;
+}
+
+.btn-outline-info {
+  background-color: #8F143D !important;
+}
+
+/****************************** Section: Cards informativos ******************************/
+.info-cards {
+  padding-bottom: 0.938rem;
+  overflow-y: hidden;
+}
+
+.card-header {
+  font-family: "PT Serif", serif !important;
+  color: #007ea7 !important;
+}
+
+p.card-text {
+  color: #003249 !important;
+}
+
+.info-cards ul {
+  padding-right: 16px !important;
+}
+
+/****************************** Section: Content menu ******************************/
+.section-content button {
+  color: rgba(112, 190, 194, 0.4392156863) !important;
+}
+
+.section-content button:hover {
+  color: #003249 !important;
+  transition: all 1s ease;
+}
+
+.section-content button.active {
+  color: #005c7a !important;
 }/*# sourceMappingURL=general.css.map */

@@ -227,6 +227,43 @@ a[aria-current=page].dropdown-item.option-menu.navbar-menu-option:hover {
   padding: 500px 0;
 }
 
+.btn-outline-info {
+  background-color: #8F143D !important;
+}
+
+/****************************** Section: Cards informativos ******************************/
+.info-cards {
+  padding-bottom: 0.938rem;
+  overflow-y: hidden;
+}
+
+.card-header {
+  font-family: "PT Serif", serif !important;
+  color: #007ea7 !important;
+}
+
+p.card-text {
+  color: #003249 !important;
+}
+
+.info-cards ul {
+  padding-right: 16px !important;
+}
+
+/****************************** Section: Content menu ******************************/
+.section-content button {
+  color: rgba(112, 190, 194, 0.4392156863) !important;
+}
+
+.section-content button:hover {
+  color: #003249 !important;
+  transition: all 1s ease;
+}
+
+.section-content button.active {
+  color: #005c7a !important;
+}
+
 /****************************** Global styles ******************************/
 /****************************** Separator line ******************************/
 .module-separator-line {
@@ -249,6 +286,10 @@ a.disabled {
 
 .m-banner-2 {
   background-image: url("../imgs/lm_module_2_banner.webp");
+}
+
+.m-banner-3 {
+  background-image: url("../imgs/lm_module_3_banner.webp");
 }
 
 .module-banner {
@@ -303,6 +344,10 @@ h5 {
 
 .m-parallax-2 {
   background-image: url(../imgs/lm_module_2_parallax.webp);
+}
+
+.m-parallax-3 {
+  background-image: url(../imgs/lm_module_3_parallax.webp);
 }
 
 .banner-parallax {
@@ -394,4 +439,21 @@ h5 {
 .btn-challenge {
   background-color: #007ea7 !important;
   color: #ccdbdc !important;
+}
+
+/****************************** Section: d-none transitions ******************************/
+#question-section,
+#get-result-section {
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Adding transition effects */
+}
+
+/* Hide element with transition */
+.d-none {
+  opacity: 0; /* Make the element transparent */
+  transform: translateY(-10px); /* Slightly move it up */
+  pointer-events: none; /* Prevent any interaction */
+}
+
+.mod3-chall-img {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }/*# sourceMappingURL=general-modules.css.map */

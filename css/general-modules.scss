@@ -4,7 +4,7 @@
 /****************************** Global styles ******************************/
 $m-banner-1: url('../imgs/lm_module_1_banner.webp');
 $m-banner-2: url('../imgs/lm_module_2_banner.webp');
-$m-banner-3: url('../imgs/lm_module_1_banner.webp');
+$m-banner-3: url('../imgs/lm_module_3_banner.webp');
 $m-banner-4: url('../imgs/lm_module_1_banner.webp');
 $m-banner-5: url('../imgs/lm_module_1_banner.webp');
 $m-banner-6: url('../imgs/lm_module_1_banner.webp');
@@ -12,6 +12,7 @@ $m-banner-7: url('../imgs/lm_module_1_banner.webp');
 
 $m-parallax-1: url(../imgs/lm_module_1_parallax.webp);
 $m-parallax-2: url(../imgs/lm_module_2_parallax.webp);
+$m-parallax-3: url(../imgs/lm_module_3_parallax.webp);
 
 /****************************** Separator line ******************************/
 .module-separator-line {
@@ -35,6 +36,10 @@ a.disabled {
 
 .m-banner-2 {
     background-image: $m-banner-2;
+}
+
+.m-banner-3 {
+    background-image: $m-banner-3;
 }
 
 .module-banner {
@@ -94,6 +99,11 @@ h5 {
 .m-parallax-2 {
     background-image: $m-parallax-2;
 }
+
+.m-parallax-3 {
+    background-image: $m-parallax-3;
+}
+
 
 .banner-parallax {
     background-size: cover;
@@ -199,4 +209,10 @@ h5 {
     opacity: 0; /* Make the element transparent */
     transform: translateY(-10px); /* Slightly move it up */
     pointer-events: none; /* Prevent any interaction */
+}
+
+
+
+.mod3-chall-img {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
