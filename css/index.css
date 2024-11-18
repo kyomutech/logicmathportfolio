@@ -250,6 +250,20 @@ p.card-text {
   padding-right: 16px !important;
 }
 
+/****************************** Section: Content menu ******************************/
+.section-content button {
+  color: rgba(112, 190, 194, 0.4392156863) !important;
+}
+
+.section-content button:hover {
+  color: #003249 !important;
+  transition: all 1s ease;
+}
+
+.section-content button.active {
+  color: #005c7a !important;
+}
+
 /****************************** Section: Video Banner ******************************/
 .hero {
   position: relative;

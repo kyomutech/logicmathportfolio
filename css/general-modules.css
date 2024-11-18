@@ -292,6 +292,10 @@ a.disabled {
   background-image: url("../imgs/lm_module_3_banner.webp");
 }
 
+.m-banner-4 {
+  background-image: url("../imgs/lm_module_4_banner.webp");
+}
+
 .module-banner {
   display: flex;
   align-items: center;
@@ -302,7 +306,7 @@ a.disabled {
   background-blend-mode: luminosity;
   height: 37.5rem;
   /* profundidad */
-  box-shadow: inset 0 0 0 1000px rgba(154, 209, 212, 0.4);
+  box-shadow: inset 0 0 0 1000px rgba(204, 218, 219, 0.4);
   padding: 6.25rem;
 }
 
@@ -348,6 +352,10 @@ h5 {
 
 .m-parallax-3 {
   background-image: url(../imgs/lm_module_3_parallax.webp);
+}
+
+.m-parallax-4 {
+  background-image: url(../imgs/lm_module_4_parallax.webp);
 }
 
 .banner-parallax {
