@@ -10,6 +10,15 @@ var cardTask2 = document.getElementById('card-mod2');
 var cardTask3 = document.getElementById('card-mod3');
 var cardTask4 = document.getElementById('card-mod4');
 
+/* Variables for showCardMod5() function */
+var cardMod5_1 = document.getElementById('card-mod-5.1');
+var cardMod5_2 = document.getElementById('card-mod-5.2');
+var cardMod5_3 = document.getElementById('card-mod-5.3');
+var cardMod5_4 = document.getElementById('card-mod-5.4');
+var cardMod5_5 = document.getElementById('card-mod-5.5');
+var cardMod5_6 = document.getElementById('card-mod-5.6');
+var cardMod5_7 = document.getElementById('card-mod-5.7');
+
 var passwordLength = document.getElementById('values-qty-input').value;
 
 // Event Listeners
@@ -24,12 +33,18 @@ btnProd.addEventListener('click', () => {
 })
 document.addEventListener('DOMContentLoaded', function () {
     const video = document.getElementById('challenge-video');
+    const equationVideo = document.getElementById('equation-video');
     
     // Ensure video is loaded before setting playback rate
     video.addEventListener('canplay', function() {
         video.playbackRate = 0.2; // Set video playback speed to half (0.5)
     });
+
+    equationVideo.addEventListener('canplay', function() {
+        equationVideo.playbackRate = 5; // Set video playback speed to half (0.5)
+    });
 });
+
 
 /**
  * @description Validates that there is a number entered in the quantity values input.
@@ -73,17 +88,6 @@ document.getElementById('start-btn').addEventListener('click', function(event) {
         document.getElementById('qty-text').textContent = passwordLength;
     }
 });
-
-/**
- * @name cleanValues()
- * @description Clean the value entered within the input field of values quantity
- */
-// document.getElementById('clean-btn').addEventListener('click', function(){
-//     passwordLength = "";
-//     document.getElementById('values-qty-input').value = "";
-//     document.getElementById('question-section').classList.add('d-none');
-//     document.getElementById('get-result-section').classList.add('d-none');
-// })
 
 document.getElementById('clean-btn').addEventListener('click', clearValues);
 document.getElementById('close-modal-btn').addEventListener('click', clearValues);
@@ -278,5 +282,57 @@ function showTask(opt) {
         cardTask2.classList.add('d-none');
         cardTask3.classList.add('d-none');
         cardTask4.classList.remove('d-none');
+    }
+}
+
+/**
+ * @name showCardMod5()
+ * @params card-mod1 || card-mod2 || card-mod3 || card-mod4
+ * @description Show the respective information of the tab
+ */
+function showCardMod5(opt) {
+
+    if(opt === "card-mod-5.1") {
+        cardMod5_1.classList.remove('d-none');
+        cardMod5_2.classList.add('d-none');
+        cardMod5_3.classList.add('d-none');
+        cardMod5_4.classList.add('d-none');
+        cardMod5_5.classList.add('d-none');
+        cardMod5_6.classList.add('d-none');
+    } else if (opt === "card-mod-5.2") {
+        cardMod5_1.classList.add('d-none');
+        cardMod5_2.classList.remove('d-none');
+        cardMod5_3.classList.add('d-none');
+        cardMod5_4.classList.add('d-none');
+        cardMod5_5.classList.add('d-none');
+        cardMod5_6.classList.add('d-none');
+    } else if (opt === "card-mod-5.3") {
+        cardMod5_1.classList.add('d-none');
+        cardMod5_2.classList.add('d-none');
+        cardMod5_3.classList.remove('d-none');
+        cardMod5_4.classList.add('d-none');
+        cardMod5_5.classList.add('d-none');
+        cardMod5_6.classList.add('d-none');
+    } else if (opt === "card-mod-5.4") {
+        cardMod5_1.classList.add('d-none');
+        cardMod5_2.classList.add('d-none');
+        cardMod5_3.classList.add('d-none');
+        cardMod5_4.classList.remove('d-none');
+        cardMod5_5.classList.add('d-none');
+        cardMod5_6.classList.add('d-none');
+    } else if (opt === "card-mod-5.5") {
+        cardMod5_1.classList.add('d-none');
+        cardMod5_2.classList.add('d-none');
+        cardMod5_3.classList.add('d-none');
+        cardMod5_4.classList.add('d-none');
+        cardMod5_5.classList.remove('d-none');
+        cardMod5_6.classList.add('d-none');
+    } else if (opt === "card-mod-5.6") {
+        cardMod5_1.classList.add('d-none');
+        cardMod5_2.classList.add('d-none');
+        cardMod5_3.classList.add('d-none');
+        cardMod5_4.classList.add('d-none');
+        cardMod5_5.classList.add('d-none');
+        cardMod5_6.classList.remove('d-none');
     }
 }

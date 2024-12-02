@@ -296,6 +296,14 @@ a.disabled {
   background-image: url("../imgs/lm_module_4_banner.webp");
 }
 
+.m-banner-5 {
+  background-image: url("../imgs/lm_module_5_banner.webp");
+}
+
+.m-banner-6 {
+  background-image: url("../imgs/lm_module_6_banner.webp");
+}
+
 .module-banner {
   display: flex;
   align-items: center;
@@ -356,6 +364,14 @@ h5 {
 
 .m-parallax-4 {
   background-image: url(../imgs/lm_module_4_parallax.webp);
+}
+
+.m-parallax-5 {
+  background-image: url(../imgs/lm_module_5_parallax.webp);
+}
+
+.m-parallax-6 {
+  background-image: url(../imgs/lm_module_6_parallax.webp);
 }
 
 .banner-parallax {
@@ -466,4 +482,29 @@ h5 {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: 95%;
   margin: 0 auto;
+}
+
+.chall-results-color p {
+  color: #007ea7 !important;
+}
+
+/****************************** Module 7 Banner ******************************/
+.text1 {
+  padding-top: 25%;
+}
+
+.mod7-banner {
+  background-image: url("../imgs/lm_module_7_banner.webp");
+  background-size: cover;
+  height: 93.75rem;
+  animation: efect 5s ease-in-out infinite alternate;
+}
+
+@keyframes efect {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100px 0;
+  }
 }/*# sourceMappingURL=general-modules.css.map */

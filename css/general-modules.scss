@@ -6,14 +6,16 @@ $m-banner-1: url('../imgs/lm_module_1_banner.webp');
 $m-banner-2: url('../imgs/lm_module_2_banner.webp');
 $m-banner-3: url('../imgs/lm_module_3_banner.webp');
 $m-banner-4: url('../imgs/lm_module_4_banner.webp');
-$m-banner-5: url('../imgs/lm_module_1_banner.webp');
-$m-banner-6: url('../imgs/lm_module_1_banner.webp');
+$m-banner-5: url('../imgs/lm_module_5_banner.webp');
+$m-banner-6: url('../imgs/lm_module_6_banner.webp');
 $m-banner-7: url('../imgs/lm_module_1_banner.webp');
 
 $m-parallax-1: url(../imgs/lm_module_1_parallax.webp);
 $m-parallax-2: url(../imgs/lm_module_2_parallax.webp);
 $m-parallax-3: url(../imgs/lm_module_3_parallax.webp);
 $m-parallax-4: url(../imgs/lm_module_4_parallax.webp);
+$m-parallax-5: url(../imgs/lm_module_5_parallax.webp);
+$m-parallax-6: url(../imgs/lm_module_6_parallax.webp);
 
 /****************************** Separator line ******************************/
 .module-separator-line {
@@ -45,6 +47,14 @@ a.disabled {
 
 .m-banner-4 {
     background-image: $m-banner-4;
+}
+
+.m-banner-5 {
+    background-image: $m-banner-5;
+}
+
+.m-banner-6 {
+    background-image: $m-banner-6;
 }
 
 .module-banner {
@@ -111,6 +121,14 @@ h5 {
 
 .m-parallax-4 {
     background-image: $m-parallax-4;
+}
+
+.m-parallax-5 {
+    background-image: $m-parallax-5;
+}
+
+.m-parallax-6 {
+    background-image: $m-parallax-6;
 }
 
 
@@ -220,10 +238,37 @@ h5 {
     pointer-events: none; /* Prevent any interaction */
 }
 
-
-
 .mod3-chall-img {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width: 95%;
     margin: 0 auto;
+}
+
+.chall-results-color p{
+    color: $color-palette-4-1 !important;
+}
+
+
+
+/****************************** Module 7 Banner ******************************/
+
+.text1 {
+    // padding-left: $px-100;
+    padding-top: 25%;
+}
+
+.mod7-banner {
+    background-image: url("../imgs/lm_module_7_banner.webp");
+    background-size: cover;
+    height: $px-1500;
+    animation: efect 5s ease-in-out infinite alternate;
+}
+
+@keyframes efect {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -100px 0;
+    }
 }
